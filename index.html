@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo de Clientes</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="card">
+
+            <header class="header">
+                <h1>Catálogo de Clientes</h1>
+                <p>Administración de clientes</p>
+            </header>
+
+            <form id="clienteForm">
+
+                <div class="form-grid">
+
+                    <div class="campo">
+                        <label for="clave">Clave</label>
+                        <input
+                            type="text"
+                            id="clave"
+                            maxlength="10"
+                            placeholder="Ej. 0001"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            maxlength="100"
+                            placeholder="Nombre completo"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="edad">Edad</label>
+                        <input
+                            type="number"
+                            id="edad"
+                            min="0"
+                            max="120"
+                            placeholder="Edad"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="fechaNacimiento">
+                            Fecha de nacimiento
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fechaNacimiento"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div id="estadoCliente" class="estado"></div>
+
+                <div class="botones">
+
+                    <button
+                        type="button"
+                        id="btnNuevo"
+                        class="btn btn-secondary"
+                    >
+                        Nuevo
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Guardar
+                    </button>
+
+                    <button
+                        type="button"
+                        id="btnEliminar"
+                        class="btn btn-danger"
+                    >
+                        Eliminar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <section class="card tabla-card">
+
+            <div class="tabla-header">
+                <div>
+                    <h2>Clientes registrados</h2>
+                    <p>Selecciona un cliente para consultar sus datos.</p>
+                </div>
+
+                <span id="totalClientes">0 registros</span>
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Clave</th>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Fecha de nacimiento</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaClientes">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
