@@ -188,3 +188,7 @@ tbody tr:hover {
         gap: 12px;
     }
 }
+
+tbody tr.seleccionado {
+    background: #dbeafe;
+}
